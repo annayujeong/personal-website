@@ -1,0 +1,176 @@
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* nav bar css */
+        .navbar-nav {
+            text-align: center;
+        }
+
+        .navbar.scrolled {
+            /* https://getcssscan.com/css-box-shadow-examples */
+            box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+            
+            
+            /* box-shadow:#2EA636 !important; */
+            transition: box-shadow 200ms linear;
+        }
+
+        #container {
+            text-align: center;
+        }
+
+        .body {
+            margin: 5%;
+            margin-top: 15%;
+            margin-bottom: 15%;
+        }
+
+        .body::before {
+            display: block;
+            content: " ";
+            margin-top: -100px;
+            height: 100px;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .point {
+            color: #2EA636;
+        }
+
+
+        #body {
+            margin: 10%;
+        }
+
+        #main-text {
+            font-size: 50pt;
+            font-weight: 900;
+        }
+
+        .card {
+            border-style: none;
+            box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+        }
+
+        .card-body {
+            text-align: left;
+        }
+
+        #skills-body {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            text-align: center;
+        }
+
+        #skills-body img {
+            width: 65px;
+            height: 65px;
+        }
+
+        .project-card,
+        .contact-card {
+            height: 300px;
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+
+        .contact-body {
+            text-align: center;
+            margin-top: 5%;
+        }
+
+
+        .project-body {
+            text-align: center;
+        }
+
+        .contact-body a,
+        .contact-link {
+            color: #2EA636;
+        }
+
+        .fa-envelope,
+        .fa-linkedin-in {
+            font-size: 30pt;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        #linkedin-copy-button,
+        #email-copy-button {
+            cursor: pointer;
+        }
+
+
+
+        /** for Project background image*/
+        #green-space {
+            background-image: url('/assets/image/garden.jpg');
+            background-size: 120%;
+            background-size: cover;
+            overflow: hidden;
+            filter: grayscale(50%);
+        }
+
+        #covaware {
+            background-image: url('/assets/image/covaware.jpg');
+            background-size: 120%;
+            background-size: cover;
+            overflow: hidden;
+            filter: grayscale(80%);
+        }
+
+        /** hover over project info */
+
+        #green-space-href {
+            display: none;
+        }
+
+        #green-space:hover #green-space-href {
+            display: block;
+        }
+
+        #covaware-href {
+            display: none;
+        }
+
+        #covaware:hover #covaware-href {
+            display: block;
+        }
+
+        #green-space:hover,
+        #covaware:hover {
+            background-color: #2EA636;
+            /*font color not working, chage it to white
+            and have 투명도 so that user can see the backgroup img a*/
+            color: white;
+            filter: blur();
+            /** why is this transition not working? */
+            transition: 2s;
+        }
+
+        #covaware-href,
+        #green-space-href {
+            color: white;
+            margin-top: 20%;
+            transition: 5s;
+        }
+
+        .fa-search {
+            margin-top: 15px;
+        }
+
+        /** cursor when hover over - projects **/
+
+        .project-body {
+            cursor: pointer;
+        }
