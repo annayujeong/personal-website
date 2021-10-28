@@ -29,22 +29,22 @@
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a id="home" class="nav-link" href="#home">Home</a>
+                            <a id="nav-home" class="nav-link" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
+                            <a id="nav-about" class="nav-link" href="#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#skills">Skill</a>
+                            <a id="nav-education" class="nav-link" href="#education">Education</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#education">Education</a>
+                            <a id="nav-skills" class="nav-link" href="#skills">Skill</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#projects">Project</a>
+                            <a id="nav-projects" class="nav-link" href="#projects">Project</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contacts">Contact</a>
+                            <a id="nav-contacts" class="nav-link" href="#contacts">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -56,40 +56,57 @@
     <div id="container">
 
         <div id="home" class="body">
-            <img src="assets/image/anna.jpg" alt="profile-picture">
+            <img src="assets/image/anna.png" alt="profile-picture">
             <div>
                 <h1>Anna Yujeong An</h1>
                 <h5 class="point">Junior Developer</h5>
-                <p>Aspiring para goes here.Aspiring para goes here.Aspiring para goes here.Aspiring para goes here.</p>
+                <p>bash: /Users/yujeongan/.profile: No such file or directory
+
+                    The default interactive shell is now zsh.
+                    To update your account to use zsh, please run `chsh -s /bin/zsh`.
+                    For more details, please visit https://support.apple.com/kb/HT208050.</p>
             </div>
         </div>
 
         <div id="about" class="body">
             <h1>About Me</h1>
-            <p>Aspiring para goes here.Aspiring para goes here.Aspiring para goes here.Aspiring para goes here.
-                Aspiring para goes here.Aspiring para goes here.Aspiring para goes here.Aspiring para goes here.
-                Aspiring para goes here.Aspiring para goes here.Aspiring para goes here.Aspiring para goes here.
-                Aspiring para goes here.Aspiring para goes here.Aspiring para goes here.Aspiring para goes here.
-                Aspiring para goes here.Aspiring para goes here.Aspiring para goes here.Aspiring para goes here.
+            <img src="/assets/image/about.jpeg" href='https://www.freepik.com/vectors/banner'>
+            <p>bash: /Users/yujeongan/.profile: No such file or directory
+                The default interactive shell is now zsh.
+                To update your account to use zsh, please run `chsh -s /bin/zsh`.
+                For more details, please visit https://support.apple.com/kb/HT208050.
+                Yujeongs-MacBook-Pro:personal-website yujeongan$ /usr/bin/env
+                /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/bin/java --enable-preview -XX:
+                +ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 -cp "/Users/yujeongan/Library/Application
+                Support/Code/User/workspac
+                eStorage/220ca41e2da6993102d0cdbf85a15821
+                /redhat.java/jdt_ws/personal-website_bbc305c8/bin" ArrayList
+                5 6 7 8 9 10 11 12 13 14
+                GETNEXT TEST
             </p>
         </div>
 
         <div id="education" class="body">
             <h1>Education</h1>
             <div class="card">
-                <div class="card-body">
+                <div id="education-body" class="card-body">
                     <h5>Computer System Technology Diploma</h5>
                     <p class="point">&nbsp;&nbsp;British Columbia Institue of Technology</p>
                     <ul>
                         <li>January 2021 - Graduating 2023</li>
-                        <li>Highlighted Coursework: Java, JavaScript, Web development, System design and database</li>
+                        <li>Highlighted Coursework</li>
+                        <ul>
+                            <li>
+                                Java, JavaScript, Web development, C, System design, Computer architecture and Database (SQL)
+                            </li>
+                        </ul>
                     </ul>
                 </div>
             </div>
         </div>
 
         <div id="skills" class="body">
-            <h1>Skill</h1>
+            <h1>Skills</h1>
             <div class="card">
                 <div id="skills-body" class="card-body">
                     <div>
@@ -133,10 +150,10 @@
         </div>
 
         <div id="projects" class="body">
-            <h1>Personal Project</h1>
+            <h1>Personal Projects</h1>
             <div class="card project-card">
                 <div id="green-space" class="card-body project-body">
-                    <a id="green-space-href" href="#">
+                    <a id="green-space-href">
                         <h4>GreenSpace</h4>
                         <p>Web Application</p>
                         <i class="fas fa-search"></i>
@@ -146,11 +163,97 @@
             </div>
             <div class="card project-card">
                 <div id="covaware" class="card-body project-body">
-                    <a id="covaware-href" href="#">
+                    <a id="covaware-href">
                         <h4>CovAware</h4>
                         <h6>Web Application</h6>
                         <i class="fas fa-search"></i>
                     </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- overlay -->
+        <div class="overlay" id="green-space-overlay">
+            <div class="card overlay-content">
+                <div class="card-header overlay-title">
+                    <span>GreenSpace</span>
+                    <span><i class="fas fa-times"></i></span>
+                </div>
+                <div class="card-body overlay-body">
+
+                    <p class="card-text">
+                        GreenSpace is a web application targeting people
+                        who are interested or involved in community gardening focusing on the social aspect to help
+                        people learn and share their experiences while providing helpful feedback.
+                    </p>
+                    <ul>
+                        <li>Ask and answer questions about plants on Forum page</li>
+                        <li>Communicate and attend group activities with people near you</li>
+                        <li>Search plants and get information on plant dictionary</li>
+                        <li>Check tweets about our website</li>
+                        <li>Track your plant with our plant tracker how you are doing with it</li>
+                    </ul>
+                    <a target="_blank"
+                        href="https://docs.google.com/presentation/d/1pyGKeadaQ6HlwDyYSeYI0RqVpXNV-fUA3XPY0jCfPX8/edit?usp=sharing">
+                        Click here to see more details! (Google Slides)
+                    </a>
+                    <div class="tools">
+                        <h5 class="tools-title">Tools Used</h5>
+                        <button type="button" class="btn btn-light">HTML5</button>
+                        <button type="button" class="btn btn-light">CSS</button>
+                        <button type="button" class="btn btn-light">JavaScript</button>
+                        <button type="button" class="btn btn-light">node.js</button>
+                        <button type="button" class="btn btn-light">express</button>
+                        <button type="button" class="btn btn-light">AWS</button>
+                        <button type="button" class="btn btn-light">Git</button>
+                        <button type="button" class="btn btn-light">GitHub</button>
+                        <button type="button" class="btn btn-light">Firebase</button>
+                        <button type="button" class="btn btn-light">BootStrap</button>
+                        <button type="button" class="btn btn-light">Twitter API</button>
+                        <button type="button" class="btn btn-light">Google Custom Search</button>
+                        <button type="button" class="btn btn-light">NatureServe API</button>
+                    </div>
+                    <img src="assets/image/green-space-3.png" class="card-img-top" alt="green-space-3">
+                    <img src="assets/image/green-space-2.png" class="card-img-top" alt="green-space-2">
+                    <img src="assets/image/green-space-4.png" class="card-img-top" alt="green-space-4">
+                    <img src="assets/image/green-space-6.png" class="card-img-top" alt="green-space-6">
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay" id="covaware-overlay">
+            <div class="card overlay-content">
+                <div class="card-header overlay-title">
+                    <span>Covaware</span>
+                    <span><i class="fas fa-times"></i></span>
+                </div>
+                <div class="card-body overlay-body">
+                    <p class="card-text">
+                        CovAware is a web application targeting people concerned about COVID-19 that provides
+                        information about how establishments they are interested in visiting are handling COVID-19 by
+                        providing crowd-sourced business reviews that focus on COVID-19 prevention and precautions.
+                    </p>
+                    <ul>
+                        <li>Check business reivews to see how they are handling COVID-19 protocols</li>
+                        <li>Leave your experiences about the establishments</li>
+                        <li>Reply customers' reviews if you are an owner of business</li>
+                    </ul>
+                    <a href="https://covid-b9f8f.web.app/main.html">
+                        Click here to see more details! (hosted URL)
+                    </a>
+                    <div class="tools">
+                        <h5 class="tools-title">Tools Used</h5>
+                        <button type="button" class="btn btn-light">HTML5</button>
+                        <button type="button" class="btn btn-light">CSS</button>
+                        <button type="button" class="btn btn-light">JavaScript</button>
+                        <button type="button" class="btn btn-light">GitHub</button>
+                        <button type="button" class="btn btn-light">Firebase</button>
+                        <button type="button" class="btn btn-light">BootStrap</button>
+
+                    </div>
+                    <img src="assets/image/covaware-1.png" class="card-img-top" alt="covaware-1">
+                    <img src="assets/image/covaware-2.png" class="card-img-top" alt="covaware-2">
+                    <img src="assets/image/covaware-3.png" class="card-img-top" alt="covaware-3">
                 </div>
             </div>
         </div>
@@ -160,7 +263,7 @@
             <div class="card contact-card">
                 <div class="card-body contact-body">
                     <p>Click</p>
-                    <a href="mailto:anna.yujeongan@gmail.com">
+                    <a target="_blank" href="mailto:anna.yujeongan@gmail.com">
                         <i class="far fa-envelope"></i>
                         <h5>Email</h5>
                     </a><br>
@@ -177,7 +280,7 @@
             <div class="card contact-card">
                 <div class="card-body contact-body">
                     <p>Click</p>
-                    <a href="https://www.linkedin.com/in/anna-an-086623206/">
+                    <a target="_blank" href="https://www.linkedin.com/in/anna-an-086623206/">
                         <i class="fab fa-linkedin-in"></i>
                         <h5>LinkedIn</h5>
                     </a><br>
@@ -187,7 +290,6 @@
                         <span id="linkedin-copy-target">linkedin.com/in/anna-an-086623206/</span>
                         <span><i class="far fa-copy"></i></span>
                     </div>
-
                 </div>
             </div>
         </div>

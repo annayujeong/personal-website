@@ -1,3 +1,18 @@
+        /** main colour used */
+        :root {
+            --color-primary: #2EA636;
+        }
+
+        /** for point elements */
+        .point {
+            color: var(--color-primary);
+        }
+
+        .active {
+            color: var(--color-primary);
+        }
+
+        /** font initialized */
         body {
             font-family: 'Poppins', sans-serif;
         }
@@ -8,18 +23,21 @@
         }
 
         .navbar.scrolled {
-            /* https://getcssscan.com/css-box-shadow-examples */
+            /* retrived from https://getcssscan.com/css-box-shadow-examples */
             box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-            
-            
-            /* box-shadow:#2EA636 !important; */
+
+
+            /* box-shadow:var(--color-primary) !important; */
             transition: box-shadow 200ms linear;
         }
 
+
+        /** center whole text in the page */
         #container {
             text-align: center;
         }
 
+        /** give each contexts margin */
         .body {
             margin: 5%;
             margin-top: 15%;
@@ -35,14 +53,23 @@
             pointer-events: none;
         }
 
-        .point {
-            color: #2EA636;
+
+        #home img {
+            margin-bottom: 3em;
+        }
+        #about img {
+            width: 400px;
+            height: 400px;
         }
 
 
-        #body {
-            margin: 10%;
+
+        #education-body,
+        #skills-body {
+            margin: 1em;
         }
+
+
 
         #main-text {
             font-size: 50pt;
@@ -81,14 +108,11 @@
             margin-top: 5%;
         }
 
-
-        .project-body {
-            text-align: center;
-        }
-
         .contact-body a,
-        .contact-link {
-            color: #2EA636;
+        #email-copy-button:hover,
+        #linkedin-copy-button:hover,
+        a:hover {
+            color: var(--color-primary);
         }
 
         .fa-envelope,
@@ -101,14 +125,16 @@
             text-decoration: none;
         }
 
-        a:hover {
-            color: black;
-        }
-
         #linkedin-copy-button,
         #email-copy-button {
             cursor: pointer;
         }
+
+
+
+
+
+
 
 
 
@@ -131,6 +157,16 @@
 
         /** hover over project info */
 
+        #green-space:hover,
+        #covaware:hover {
+            background-color: var(--color-primary);
+
+            /*font color not working, chage it to white
+            and have 투명도 so that user can see the backgroup img a*/
+            color: white;
+            filter: blur();
+        }
+
         #green-space-href {
             display: none;
         }
@@ -145,24 +181,14 @@
 
         #covaware:hover #covaware-href {
             display: block;
-        }
 
-        #green-space:hover,
-        #covaware:hover {
-            background-color: #2EA636;
-            /*font color not working, chage it to white
-            and have 투명도 so that user can see the backgroup img a*/
-            color: white;
-            filter: blur();
-            /** why is this transition not working? */
-            transition: 2s;
         }
 
         #covaware-href,
         #green-space-href {
             color: white;
-            margin-top: 20%;
-            transition: 5s;
+            margin-top: 5em;
+            text-align: center;
         }
 
         .fa-search {
@@ -173,4 +199,80 @@
 
         .project-body {
             cursor: pointer;
+        }
+
+
+
+        /** project overlay */
+        .overlay {
+            position: fixed;
+            /* Sit on top of the page content */
+            display: none;
+            /* Hidden by default */
+            width: 100%;
+            /* Full width (cover the whole page) */
+            height: 100%;
+            /* Full height (cover the whole page) */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Black background with opacity */
+        }
+
+        .overlay-content {
+            height: 80%;
+            top: 12%;
+            overflow: scroll;
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+
+        .overlay-body {
+            margin: 1em;
+        }
+
+        .overlay-title {
+            font-size: 18pt;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0px;
+            color: var(--color-primary);
+            background-color: white;
+            box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+        }
+
+        .fa-times {
+            float: right;
+            cursor: pointer;
+            color: black;
+        }
+
+        .fa-times:hover {
+            color: var(--color-primary);
+        }
+
+        .overlay .btn {
+            margin: 5px;
+        }
+
+        .tools {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .overlay a {
+            text-decoration: underline;
+            color: var(--color-primary);
+        }
+
+        .tools-title {
+            text-align: center;
+            font-size: 18pt;
+        }
+
+        .overlay img {
+            margin-top: 15px;
+            margin-bottom: 15px;
         }
