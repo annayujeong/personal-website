@@ -14,6 +14,10 @@
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/image/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/image/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/image/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
@@ -57,32 +61,38 @@
 
         <div id="home" class="body">
             <img src="assets/image/anna.png" alt="profile-picture">
-            <div>
+            <div id="home-text">
                 <h1>Anna Yujeong An</h1>
                 <h5 class="point">Junior Developer</h5>
-                <p>bash: /Users/yujeongan/.profile: No such file or directory
-
-                    The default interactive shell is now zsh.
-                    To update your account to use zsh, please run `chsh -s /bin/zsh`.
-                    For more details, please visit https://support.apple.com/kb/HT208050.</p>
+                <p>
+                    Welcome to my portfolio website. <br>
+                    I am a full-time BCIT student who aspires to become a software
+                    developer.<br><br>
+                </p>
+                <a href="assets/image/resume-anna.pdf" download="resume-anna">
+                    <button type="button" id="download-resume" class="btn">Download Resume</button><br><br>
+                </a>
+                <a id="home-linkedin" target="_blank" href="https://www.linkedin.com/in/anna-an-086623206/">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a id="home-github" target="_blank" href="https://github.com/annayujeong">
+                    <i class="fab fa-github"></i>
+                </a>
             </div>
         </div>
 
         <div id="about" class="body">
             <h1>About Me</h1>
             <img src="/assets/image/about.jpeg" href='https://www.freepik.com/vectors/banner'>
-            <p>bash: /Users/yujeongan/.profile: No such file or directory
-                The default interactive shell is now zsh.
-                To update your account to use zsh, please run `chsh -s /bin/zsh`.
-                For more details, please visit https://support.apple.com/kb/HT208050.
-                Yujeongs-MacBook-Pro:personal-website yujeongan$ /usr/bin/env
-                /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/bin/java --enable-preview -XX:
-                +ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 -cp "/Users/yujeongan/Library/Application
-                Support/Code/User/workspac
-                eStorage/220ca41e2da6993102d0cdbf85a15821
-                /redhat.java/jdt_ws/personal-website_bbc305c8/bin" ArrayList
-                5 6 7 8 9 10 11 12 13 14
-                GETNEXT TEST
+            <p>
+                Hi, I'm Anna currently a full-time student working towards a diploma in Computer System Technology at
+                British Columbia Institue of Technology.
+                I am interested in front/full-stack development and do program with variety languages including Java,
+                JavaScript, and C, and tools such as HTML and CSS.
+                <br><br>I am passionate about learning new languages and adopting technologies and constantly seeking
+                out new learning opportunities.
+                In addition to that, I love to communicate and collaborate work with others. In my spare time, I enjoy
+                hiking, workout, and reading books.
             </p>
         </div>
 
@@ -97,7 +107,8 @@
                         <li>Highlighted Coursework</li>
                         <ul>
                             <li>
-                                Java, JavaScript, Web development, C, System design, Computer architecture and Database (SQL)
+                                Java, JavaScript, Web development, C, System design, Computer architecture and Database
+                                (SQL)
                             </li>
                         </ul>
                     </ul>
@@ -213,10 +224,9 @@
                         <button type="button" class="btn btn-light">Google Custom Search</button>
                         <button type="button" class="btn btn-light">NatureServe API</button>
                     </div>
-                    <img src="assets/image/green-space-3.png" class="card-img-top" alt="green-space-3">
-                    <img src="assets/image/green-space-2.png" class="card-img-top" alt="green-space-2">
-                    <img src="assets/image/green-space-4.png" class="card-img-top" alt="green-space-4">
-                    <img src="assets/image/green-space-6.png" class="card-img-top" alt="green-space-6">
+                    <img src="assets/image/green-space-7.png" class="card-img-top" alt="green-space-3">
+                    <img src="assets/image/green-space-8.png" class="card-img-top" alt="green-space-2">
+                    <img src="assets/image/green-space-9.png" class="card-img-top" alt="green-space-4">
                 </div>
             </div>
         </div>
@@ -251,9 +261,9 @@
                         <button type="button" class="btn btn-light">BootStrap</button>
 
                     </div>
-                    <img src="assets/image/covaware-1.png" class="card-img-top" alt="covaware-1">
-                    <img src="assets/image/covaware-2.png" class="card-img-top" alt="covaware-2">
-                    <img src="assets/image/covaware-3.png" class="card-img-top" alt="covaware-3">
+                    <img class="covaware-image" src="assets/image/covaware-1.png" class="card-img-top" alt="covaware-1">
+                    <img class="covaware-image" src="assets/image/covaware-2.png" class="card-img-top" alt="covaware-2">
+                    <img class="covaware-image" src="assets/image/covaware-3.png" class="card-img-top" alt="covaware-3">
                 </div>
             </div>
         </div>
@@ -312,6 +322,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
 
     <!-- Scripts -->
+    <script type="text/javascript" src="assets/js/firebase.js"></script>
     <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 

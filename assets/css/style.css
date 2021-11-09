@@ -54,22 +54,30 @@
         }
 
 
+
+        /** home */
+
+        #home-github,
+        #home-linkedin {
+            margin: 1em;
+        }
+
         #home img {
             margin-bottom: 3em;
         }
+
+
+
+        /** about */
         #about img {
             width: 400px;
             height: 400px;
         }
 
-
-
         #education-body,
         #skills-body {
             margin: 1em;
         }
-
-
 
         #main-text {
             font-size: 50pt;
@@ -116,8 +124,10 @@
         }
 
         .fa-envelope,
-        .fa-linkedin-in {
+        .fa-linkedin-in,
+        .fa-github {
             font-size: 30pt;
+            color: var(--color-primary);
         }
 
         a {
@@ -257,6 +267,11 @@
             margin: 5px;
         }
 
+        #download-resume {
+            background-color: var(--color-primary);
+            color: white;
+        }
+
         .tools {
             margin-top: 30px;
             margin-bottom: 30px;
@@ -275,4 +290,92 @@
         .overlay img {
             margin-top: 15px;
             margin-bottom: 15px;
+        }
+
+        .covaware-image {
+            width: 85%;
+        }
+
+
+
+        @media only screen and (min-width: 992px) {
+            #home img {
+                float: right;
+                margin-top: 1em;
+                margin-left: 2em;
+                margin-right: 4em;
+            }
+
+            #home-text {
+                text-align: left;
+                margin-top: 3.5em;
+                margin-left: 4em;
+            }
+
+            #about p {
+                margin-top: 2em;
+                margin-left: 4em;
+                margin-right: 4em;
+            }
+
+            .card {
+                margin-left: 4em;
+                margin-right: 4em;
+            }
+
+            .overlay-body {
+                margin-left: 5em;
+                margin-right: 5em;
+            }
+
+            .overlay-content {
+                margin-left: 6em;
+                margin-right: 6em;
+            }
+
+            .covaware-image {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 32%;
+                float: left;
+                padding: 0.2em;
+            }
+
+        }
+
+        @media only screen and (min-width: 1200px) {
+            #home img {
+                margin-top: 1em;
+                margin-left: 2em;
+                margin-right: 6em;
+            }
+
+            #home-text {
+                text-align: left;
+                margin-top: 3.5em;
+                margin-left: 6em;
+            }
+
+            #about p {
+                margin-top: 2em;
+                margin-left: 6em;
+                margin-right: 6em;
+            }
+
+            .card {
+                margin-left: 6em;
+                margin-right: 6em;
+            }
+
+            .overlay-body {
+                margin-left: 7em;
+                margin-right: 7em;
+            }
+
+            .overlay-content {
+                margin-left: 8em;
+                margin-right: 8em;
+            }
+
         }
