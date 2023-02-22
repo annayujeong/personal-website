@@ -8,7 +8,6 @@ function copyEmailToClipBoard() {
         .catch(err => {
             console.log('Something went wrong', err);
         })
-
 }
 
 function copyLinkedinToClipBoard() {
@@ -21,7 +20,6 @@ function copyLinkedinToClipBoard() {
         .catch(err => {
             console.log('Something went wrong', err);
         })
-
 }
 
 function collapseNavBar() {
@@ -46,15 +44,18 @@ function displayProjectDetails() {
     var overlayElement = this.id + "-overlay";
     document.getElementById(overlayElement).style.display = "block";
 
-    /** disable document body scrolling when the overlay elements are on 'on' */
+    // disable document body scrolling when the overlay elements are on 'on'
     document.body.style.overflow = 'hidden';
+
+    document.getElementById("contacts").style.backgroundColor = red;
 }
 
 function hideProjectDetails() {
     document.getElementById("green-space-overlay").style.display = "none";
     document.getElementById("covaware-overlay").style.display = "none";
+    document.getElementById("trackerly-overlay").style.display = "none";
 
-    /** un-disable document body scrolling when the overlay elements are on 'on' */
+    // un-disable document body scrolling when the overlay elements are on 'on'
     document.body.style.overflow = 'scroll';
 }
 
@@ -62,13 +63,11 @@ function hideProjectDetails() {
 function changeNavElementColor(id, start, end) {
     $(window).scroll(() => {
         var scroll = $(this).scrollTop();
-
         if (scroll > start && scroll < end) {
             $("#" + id).addClass("active");
         } else {
             $("#" + id).removeClass("active");
         }
-        
     });
 }
 
@@ -94,5 +93,4 @@ $(document).ready(() => {
 
     $("#email-copy-button").on("click", copyEmailToClipBoard);
     $("#linkedin-copy-button").on("click", copyLinkedinToClipBoard);
-
 });

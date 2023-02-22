@@ -1,381 +1,357 @@
-        /** main colour used */
-        :root {
-            --color-primary: #2EA636;
-        }
-
-        /** for point elements */
-        .point {
-            color: var(--color-primary);
-        }
-
-        .active {
-            color: var(--color-primary);
-        }
-
-        /** font initialized */
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-
-        /* nav bar css */
-        .navbar-nav {
-            text-align: center;
-        }
-
-        .navbar.scrolled {
-            /* retrived from https://getcssscan.com/css-box-shadow-examples */
-            box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-
-
-            /* box-shadow:var(--color-primary) !important; */
-            transition: box-shadow 200ms linear;
-        }
-
-
-        /** center whole text in the page */
-        #container {
-            text-align: center;
-        }
-
-        /** give each contexts margin */
-        .body {
-            margin: 5%;
-            margin-top: 15%;
-            margin-bottom: 15%;
-        }
-
-        .body::before {
-            display: block;
-            content: " ";
-            margin-top: -100px;
-            height: 100px;
-            visibility: hidden;
-            pointer-events: none;
-        }
-
-
-
-        /** home */
-
-        #home-github,
-        #home-linkedin {
-            margin: 1em;
-        }
-
-        #home img {
-            margin-bottom: 3em;
-        }
-
-
-
-        /** about */
-        #about img {
-            width: 400px;
-            height: 400px;
-        }
-
-        #education-body,
-        #skills-body {
-            margin: 1em;
-        }
-
-        #main-text {
-            font-size: 50pt;
-            font-weight: 900;
-        }
-
-        .card {
-            border-style: none;
-            box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-        }
-
-        .card-body {
-            text-align: left;
-        }
-
-        #skills-body {
-            display: grid;
-            grid-template-columns: auto auto auto;
-            text-align: center;
-        }
-
-        #skills-body img {
-            width: 65px;
-            height: 65px;
-        }
-
-        .project-card,
-        .contact-card {
-            height: 300px;
-            margin-top: 2em;
-            margin-bottom: 2em;
-        }
-
-        .contact-body {
-            text-align: center;
-            margin-top: 5%;
-        }
-
-        .contact-body a,
-        #email-copy-button:hover,
-        #linkedin-copy-button:hover,
-        a:hover {
-            color: var(--color-primary);
-        }
-
-        .fa-envelope,
-        .fa-linkedin-in,
-        .fa-github {
-            font-size: 30pt;
-            color: var(--color-primary);
-        }
-
-        a {
-            color: black;
-            text-decoration: none;
-        }
-
-        #linkedin-copy-button,
-        #email-copy-button {
-            cursor: pointer;
-        }
-
-
-
-
-
-
-
-
-
-        /** for Project background image*/
-        #green-space {
-            background-image: url('/assets/image/garden.jpg');
-            background-size: 120%;
-            background-size: cover;
-            overflow: hidden;
-            filter: grayscale(50%);
-        }
-
-        #covaware {
-            background-image: url('/assets/image/covaware.jpg');
-            background-size: 120%;
-            background-size: cover;
-            overflow: hidden;
-            filter: grayscale(80%);
-        }
-
-        /** hover over project info */
-
-        #green-space:hover,
-        #covaware:hover {
-            background-color: var(--color-primary);
-
-            /*font color not working, chage it to white
-            and have 투명도 so that user can see the backgroup img a*/
-            color: white;
-            filter: blur();
-        }
-
-        #green-space-href {
-            display: none;
-        }
-
-        #green-space:hover #green-space-href {
-            display: block;
-        }
-
-        #covaware-href {
-            display: none;
-        }
-
-        #covaware:hover #covaware-href {
-            display: block;
-
-        }
-
-        #covaware-href,
-        #green-space-href {
-            color: white;
-            margin-top: 5em;
-            text-align: center;
-        }
-
-        .fa-search {
-            margin-top: 15px;
-        }
-
-        /** cursor when hover over - projects **/
-
-        .project-body {
-            cursor: pointer;
-        }
-
-
-
-        /** project overlay */
-        .overlay {
-            position: fixed;
-            /* Sit on top of the page content */
-            display: none;
-            /* Hidden by default */
-            width: 100%;
-            /* Full width (cover the whole page) */
-            height: 100%;
-            /* Full height (cover the whole page) */
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            /* Black background with opacity */
-        }
-
-        .overlay-content {
-            height: 80%;
-            top: 12%;
-            overflow: scroll;
-            margin-left: 1em;
-            margin-right: 1em;
-        }
-
-        .overlay-body {
-            margin: 1em;
-        }
-
-        .overlay-title {
-            font-size: 18pt;
-            position: -webkit-sticky;
-            position: sticky;
-            top: 0px;
-            color: var(--color-primary);
-            background-color: white;
-            box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-        }
-
-        .fa-times {
-            float: right;
-            cursor: pointer;
-            color: black;
-        }
-
-        .fa-times:hover {
-            color: var(--color-primary);
-        }
-
-        .overlay .btn {
-            margin: 5px;
-        }
-
-        #download-resume {
-            background-color: var(--color-primary);
-            color: white;
-        }
-
-        .tools {
-            margin-top: 30px;
-            margin-bottom: 30px;
-        }
-
-        .overlay a {
-            text-decoration: underline;
-            color: var(--color-primary);
-        }
-
-        .tools-title {
-            text-align: center;
-            font-size: 18pt;
-        }
-
-        .overlay img {
-            margin-top: 15px;
-            margin-bottom: 15px;
-        }
-
-        .covaware-image {
-            width: 85%;
-        }
-
-
-
-        @media only screen and (min-width: 992px) {
-            #home img {
-                float: right;
-                margin-top: 1em;
-                margin-left: 2em;
-                margin-right: 4em;
-            }
-
-            #home-text {
-                text-align: left;
-                margin-top: 3.5em;
-                margin-left: 4em;
-            }
-
-            #about p {
-                margin-top: 2em;
-                margin-left: 4em;
-                margin-right: 4em;
-            }
-
-            .card {
-                margin-left: 4em;
-                margin-right: 4em;
-            }
-
-            .overlay-body {
-                margin-left: 5em;
-                margin-right: 5em;
-            }
-
-            .overlay-content {
-                margin-left: 6em;
-                margin-right: 6em;
-            }
-
-            .covaware-image {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 32%;
-                float: left;
-                padding: 0.2em;
-            }
-
-        }
-
-        @media only screen and (min-width: 1200px) {
-            #home img {
-                margin-top: 1em;
-                margin-left: 2em;
-                margin-right: 6em;
-            }
-
-            #home-text {
-                text-align: left;
-                margin-top: 3.5em;
-                margin-left: 6em;
-            }
-
-            #about p {
-                margin-top: 2em;
-                margin-left: 6em;
-                margin-right: 6em;
-            }
-
-            .card {
-                margin-left: 6em;
-                margin-right: 6em;
-            }
-
-            .overlay-body {
-                margin-left: 7em;
-                margin-right: 7em;
-            }
-
-            .overlay-content {
-                margin-left: 8em;
-                margin-right: 8em;
-            }
-
-        }
+/** main colour used */
+:root {
+    --color-primary: #2EA636;
+}
+
+/** for point elements */
+.point {
+    color: var(--color-primary);
+}
+
+.active {
+    color: var(--color-primary);
+}
+
+/** font initialized */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/** nav bar css */
+.navbar-nav {
+    text-align: center;
+}
+
+.navbar.scrolled {
+    /* retrived from https://getcssscan.com/css-box-shadow-examples */
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+    /* box-shadow:var(--color-primary) !important; */
+    transition: box-shadow 200ms linear;
+}
+
+#container {
+    text-align: center;
+}
+
+.body {
+    margin: 5%;
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+
+.body::before {
+    display: block;
+    content: " ";
+    margin-top: -100px;
+    height: 100px;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/** home */
+#home-github,
+#home-linkedin {
+    margin: 1em;
+}
+
+#home img {
+    margin-bottom: 3em;
+}
+
+/** about */
+#about img {
+    width: 400px;
+    height: 400px;
+}
+
+#education-body,
+#work-experience-body,
+#skills-body {
+    margin: 1em;
+}
+
+#main-text {
+    font-size: 50pt;
+    font-weight: 900;
+}
+
+.card {
+    border-style: none;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.card-body {
+    text-align: left; 
+}
+
+#skills-body {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+}
+
+#skills-body img {
+    width: 65px;
+    height: 65px;
+}
+
+.project-card,
+.contact-card {
+    height: 300px;
+    margin-bottom: 2em;
+}
+
+.contact-body {
+    text-align: center;
+    margin-top: 2%;
+}
+
+.contact-body a,
+#email-copy-button:hover,
+#linkedin-copy-button:hover,
+a:hover {
+    color: var(--color-primary);
+}
+
+.fa-envelope,
+.fa-linkedin-in,
+.fa-github {
+    font-size: 30pt;
+    color: var(--color-primary);
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#linkedin-copy-button,
+#email-copy-button {
+    cursor: pointer;
+}
+
+/** Project */
+#trackerly {
+    background-image: url('/assets/image/trackerly.png');
+    filter: grayscale(50%);
+}
+
+#green-space {
+    background-image: url('/assets/image/garden.jpg');
+    filter: grayscale(50%);
+}
+
+#covaware {
+    background-image: url('/assets/image/covaware.jpg');
+    filter: grayscale(80%);
+}
+
+#trackerly img {
+    width: 20%;
+}
+
+#trackerly,
+#green-space,
+#covaware {
+    background-size: 120%;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#trackerly:hover,
+#green-space:hover,
+#covaware:hover {
+    background-color: var(--color-primary);
+    color: white;
+    filter: blur();
+}
+
+#trackerly-href,
+#green-space-href,
+#covaware-href  {
+    display: none;
+    color: white;
+    margin-top: 5em;
+    text-align: center;
+}
+
+#trackerly:hover #trackerly-href,
+#green-space:hover #green-space-href,
+#covaware:hover #covaware-href {
+    display: block;
+}
+
+.fa-search {
+    margin-top: 15px;
+}
+
+.project-body {
+    cursor: pointer;
+}
+
+.overlay {
+    z-index: 1;
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay-content {
+    height: 80%;
+    top: 12%;
+    overflow: scroll;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.overlay-body {
+    margin: 1em;
+}
+
+.overlay-title {
+    font-size: 18pt;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    color: var(--color-primary);
+    background-color: white;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.fa-times {
+    float: right;
+    cursor: pointer;
+    color: black;
+}
+
+.fa-times:hover {
+    color: var(--color-primary);
+}
+
+.overlay .btn {
+    margin: 5px;
+}
+
+#download-resume {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.tools {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.overlay a {
+    text-decoration: underline;
+    color: var(--color-primary);
+}
+
+.tools-title {
+    text-align: center;
+    font-size: 18pt;
+}
+
+.overlay img {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.covaware-image {
+    width: 85%;
+}
+
+/** Media size tablet */
+@media only screen and (min-width: 992px) {
+    #home img {
+        float: right;
+        margin-top: 1em;
+        margin-left: 2em;
+        margin-right: 4em;
+    }
+
+    #home-text {
+        text-align: left;
+        margin-top: 3.5em;
+        margin-left: 4em;
+    }
+
+    #about-image {
+        float: right;
+    }
+
+    #about-para {
+        text-align: left;
+        margin-top: 4em;
+        margin-left: 4em;
+    }
+
+    .card {
+        margin-left: 4em;
+        margin-right: 4em;
+    }
+
+    .overlay-body {
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+
+    .overlay-content {
+        margin-left: 6em;
+        margin-right: 6em;
+    }
+
+    .covaware-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 32%;
+        float: left;
+        padding: 0.2em;
+    }
+
+}
+
+/** Media size desktop */
+@media only screen and (min-width: 1200px) {
+    #home img {
+        margin-top: 1em;
+        margin-left: 2em;
+        margin-right: 6em;
+    }
+
+    #home-text {
+        text-align: left;
+        margin-top: 3.5em;
+        margin-left: 6em;
+    }
+
+    #about p {
+        margin-top: 2em;
+        margin-left: 6em;
+        margin-right: 6em;
+    }
+
+    .card {
+        margin-left: 6em;
+        margin-right: 6em;
+    }
+
+    .overlay-body {
+        margin-left: 7em;
+        margin-right: 7em;
+    }
+
+    .overlay-content {
+        margin-left: 8em;
+        margin-right: 8em;
+    }
+
+}
